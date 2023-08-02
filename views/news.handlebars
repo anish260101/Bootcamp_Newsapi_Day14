@@ -1,0 +1,302 @@
+{{!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>News Headlines</title>
+</head>
+
+<body>
+    <h1>Top News Headlines</h1>
+    {{#each articles}}
+    <div>
+        <h2>{{this.title}}</h2>
+        <p>{{this.description}}</p>
+        <a href="{{this.url}}" target="_blank">Read More</a>
+        <p>Published At: {{this.publishedAt}}</p>
+        <p>Source: {{this.source.name}}</p>
+        <hr>
+    </div>
+    {{/each}}
+</body>
+
+</html> --}}
+
+{{!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>News Headlines</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .article {
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007BFF;
+        }
+
+        p {
+            color: #555;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Top News Headlines</h1>
+    {{#each articles}}
+    <div class="article">
+        <h2>{{this.title}}</h2>
+        <p>{{this.description}}</p>
+        <a href="/article/{{this.id}}" target="_blank">Read More</a>
+        <p>Published At: {{this.publishedAt}}</p>
+        <p>Source: {{this.source.name}}</p>
+        <hr>
+    </div>
+    {{/each}}
+</body>
+
+</html> --}}
+
+{{!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>News Headlines</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .article {
+            flex: 0 0 calc(33.33% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007BFF;
+        }
+
+        p {
+            color: #555;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Top News Headlines</h1>
+    <div class="row">
+        {{#each articles}}
+        <div class="article">
+            <h2>{{this.title}}</h2>
+            <p>{{this.description}}</p>
+            <a href="/article/{{this.id}}" target="_blank">Read More</a>
+            <p>Published At: {{this.publishedAt}}</p>
+            <p>Source: {{this.source.name}}</p>
+            <hr>
+        </div>
+        {{/each}}
+    </div>
+</body>
+
+</html> --}}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>News Headlines</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: -10px;
+        }
+
+        .article {
+            flex: 0 0 calc(33.33% - 20px);
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+        }
+
+        h2 {
+            color: #007BFF;
+        }
+
+        p {
+            color: #555;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 10px 0;
+        }
+
+        .thumbnail {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .article-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .placeholder-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+{{!-- <body> --}}
+    {{!-- <h1>Top News Headlines</h1>
+    <div class="row">
+        {{#each articles}}
+        <div class="article">
+            {{#if this.thumbnail}}
+            <img class="thumbnail" src="{{this.thumbnail}}" alt="{{this.title}}">
+            {{/if}}
+            {{#if this.image}}
+            <img class="article-image" src="{{this.image}}" alt="{{this.title}}">
+            {{/if}}
+            <h2>{{this.title}}</h2>
+            <p>{{this.description}}</p>
+            <a href="/article/{{this.id}}" target="_blank">Read More</a>
+            <p>Published At: {{this.publishedAt}}</p>
+            <p>Source: {{this.source.name}}</p>
+            <hr>
+        </div>
+        {{/each}}
+    </div>
+</body>
+
+</html> --}}
+
+<body>
+    <h1>Top News Headlines</h1>
+    <div class="row">
+        {{#each articles}}
+        <div class="article">
+            {{#if this.thumbnail}}
+            <img class="thumbnail" src="{{this.thumbnail}}" alt="{{this.title}}">
+            {{else if this.UrlToImage}}
+            <img class="article-image" src="{{this.UrlToImage}}" alt="{{this.title}}">
+            {{else}}
+            <img class="placeholder-image" src="C:\Users\anisraj\Desktop\Bootcamp\Day 14\public\images\placeholder-news.jpg" alt="No Image Available">
+            {{/if}}
+            <h2>{{this.title}}</h2>
+            <p>{{this.description}}</p>
+            <button onclick="redirectToArticle('{{this.url}}')">Read More</button>
+            <p>Published At: {{this.publishedAt}}</p>
+            <p>Source: {{this.source.name}}</p>
+            <hr>
+        </div>
+        {{/each}}
+    </div>
+
+    <script>
+        function redirectToArticle(url) {
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+
+</html>
+
